@@ -47,6 +47,12 @@ class LoginSchema(BaseModel):
     username: str
     password: str
 #Admin result
+class AnswerSchema(BaseModel):
+    questionId: str
+    code: str
+    language: str
+    passed: bool
+    marks: int
 class TestResultSchema(BaseModel):
     studentName: str
     rollNumber: str
@@ -64,12 +70,7 @@ class StudentRegisterSchema(BaseModel):
     rollNumber: str
     password: str
 #Answer
-class AnswerSchema(BaseModel):
-    questionId: str
-    code: str
-    language: str
-    passed: bool
-    marks: int
+
 
 @app.post("/api/admin/login")
 async def admin_login(data: LoginSchema):
