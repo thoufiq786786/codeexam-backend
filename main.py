@@ -15,7 +15,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins = [
-    "https://your-project-name.vercel.app",
+    "https://codeexam-frontend.vercel.app",
     "http://localhost:5173"],  # Allows all origins
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"], # Explicitly include OPTIONS
